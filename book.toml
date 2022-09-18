@@ -1,0 +1,17 @@
+[book]
+authors = ["Tony Bark"]
+language = "en"
+multilingual = false
+src = "src"
+title = "CoH: Homecoming Guide"
+
+[build]
+create-missing = false
+
+[output.html]
+no-section-label = true
+additional-css = ["custom.css"]
+git-repository-url = "https://github.com/tonytins/coh"
+
+[output.html.fold]
+enable = true
