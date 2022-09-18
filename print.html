@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>CoH: Homecoming Guide</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="custom.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="intro.html">Introduction</a></li><li class="chapter-item "><div>Homecoming</div></li><li class="chapter-item affix "><li class="part-title">Gameplay</li><li class="chapter-item "><a href="gameplay/inf.html">Inf</a></li><li class="chapter-item "><a href="gameplay/notoriety.html">Notoriety</a></li><li class="chapter-item affix "><li class="part-title">Issues</li><li class="chapter-item "><div>25 - Unbroken Spirit</div></li><li class="chapter-item "><div>26 - Homecoming</div></li><li class="chapter-item "><a href="issues/27.html">27 - Second Chances</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CoH: Homecoming Guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/tonytins/coh" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>
+<img align="right" width="30%" style="padding:10px;" src="./imgs/homecoming-logo.png">
+</p>
+<p>A condescend guide to City of Heroes based on the <a href="https://archive.paragonwiki.com">Paragon Wiki</a> that targets <a href="https://forums.homecomingservers.com/">Homecoming</a>'s private servers.</p>
+<p>City of Heroes was home to an entire multiverse of superpowered beings in a stunning, 3D graphical world. Hundreds of thousands of players took on the roles of heroes, villains, vigilantes, and rogues, while both saving and destroying worlds. City of Heroes was known for its groundbreaking level of customization, its highly community-focused features, and its abundant developer-player interaction and feedback.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="inf"><a class="header" href="#inf">Inf</a></h1>
+<p><strong>Influence</strong>, <strong>Infamy</strong>, and <strong>Information</strong>, commonly known as <em>Inf</em>, is the currency that is earned by defeating opponents, completing missions and selling items. It is used to buy Inspirations, Enhancements, and Costumes. Inf can be traded by mail through characters of any alignment.</p>
+<h2 id="inf-cap"><a class="header" href="#inf-cap">Inf Cap</a></h2>
+<h3 id="original"><a class="header" href="#original">Original</a></h3>
+<p>In the original, free players could only hold 25 million inf. Premium players could increase this cap using reward tokens.</p>
+<ul>
+<li>1 Reward Token: 25,000,000 (25 million) per character (Free players occupy this tier)</li>
+<li>2 Reward Tokens: 500,000,000 (500 million) per character</li>
+<li>5 Reward Tokens: 1,000,000,000 (1 billion) per character</li>
+<li>8 Reward Tokens: 2,000,000,000 (2 billion) per character</li>
+</ul>
+<p>VIP Players have an inf limit of 2 billion regardless of how many Reward Tokens they have earned.</p>
+<h3 id="homecoming"><a class="header" href="#homecoming">Homecoming</a></h3>
+<p>Because VIP is granted to players by default in Homecoming, all characters can have up to 2 billion Inf regardless of the amount of reward tokens they have. As CoH was formally a subscription-based game, the economy was likely already adjusted to taken into account the billion Inf as it is hardly a complaint.</p>
+<h2 id="understanding-inf"><a class="header" href="#understanding-inf">Understanding Inf</a></h2>
+<p>Inf. is used as an abstraction layer over more descriptive or intuitive currencies, such as &quot;Credits&quot; or &quot;Dollars,&quot; because each hero or villain created in City of Heroes (and in general) because all have diverse range of origins that using something ore specific would not be suitable.</p>
+<h3 id="examples"><a class="header" href="#examples">Examples</a></h3>
+<p>As illustrative examples, consider the in-game stories behind three of the Signature Heroes.</p>
+<p>Mynx is a young, college-age woman who was granted super-powers against her will by the corrupt Crey Corporation. As a young woman, she doesn't really have a lot of financial clout. However, her repeated service to the city has ensured that when she needs resources to help fight crime, those resources will be available to her regardless of how much money (paper currency) she has on her person or in a bank account.</p>
+<p>Mynx's earned Influence is primarily in the form of &quot;good will&quot; support available to her from her allies and the businesses located in Paragon City.</p>
+<p>Manticore is an adult man who inherited a vast fortune and runs powerful businesses. His real identity is not particularly well known. As a more secretive hero, he's not likely to depend upon the good will of the city or his allies for support. Rather, he'll purchase it outright or use his existing financial assets to manufacture what he can't purchase.</p>
+<p>Manticore's Influence is primarily in the form of his vast financial assets.</p>
+<p>Statesman is an immortal being who's been protecting the city and the world for the better part of a century. He was a wealthy man when he began his exploits as Statesman, and we can assume that he's been responsible with that wealth. He's been active in the fight against evil for so long that he's become the very epitome of heroism to many in the city.</p>
+<p>Statesman's Influence comprises not only the good will of the city and his extensive personal financial resources, but is also bolstered by the sheer amount of authority and expertise he wields.</p>
+<h2 id="external-links"><a class="header" href="#external-links">External Links</a></h2>
+<ul>
+<li><a href="https://archive.paragonwiki.com/wiki/Inf">Understanding Influence and Infamy</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notoriety"><a class="header" href="#notoriety">Notoriety</a></h1>
+<p>
+<img align="right" width="50%" style="padding:10px;" src="gameplay/./../imgs/notoriety.png">
+</p>
+<p><strong>Notoriety</strong> is a difficultly or challenge setting that affects the size and makeup of enemy spawns in (door) missions that <em>haven't</em> been started.</p>
+<h2 id="contacts"><a class="header" href="#contacts">Contacts</a></h2>
+<p>You can change your character's notoriety anywhere in the game by interacting with a notoriety contact. Each contact goes under a different agency, organization, or division, depending on the setting. Rouge has the most diverse set.</p>
+<div class="table-wrapper"><table><thead><tr><th>Contact</th><th>Setting</th><th>Expansion</th></tr></thead><tbody>
+<tr><td>Field Analyst</td><td>Paragon City</td><td>Base</td></tr>
+<tr><td>Fortunata Fateweaver</td><td>Rogue Isles</td><td>Villains</td></tr>
+<tr><td>Powers Division Dispatcher</td><td>Praetoria</td><td>Rouge</td></tr>
+<tr><td>Resistance Operative Handler</td><td>Praetoria</td><td>Rouge</td></tr>
+<tr><td>Mistress of Fate</td><td>Praetoria</td><td>Rouge</td></tr>
+</tbody></table>
+</div>
+<h2 id="spawns"><a class="header" href="#spawns">Spawns</a></h2>
+<p>The primary factors it affects the spawn size and makeup include the experience level of the character when the mission was assigned based on the character's notoriety and number of team members.</p>
+<p>Spawns are at their lowest in missions attempt by a solo player, generating three minions or a minion and a lieutenant. Two players will have three to give minions and a lieutenant, potentially one level higher. Players with higher notoriety produce greater spawns and sometimes bosses above the number placed by the mission designer.</p>
+<h3 id="architect-entertainment"><a class="header" href="#architect-entertainment">Architect Entertainment</a></h3>
+<p>Notoriety also affects spawns at  Architect Entertainment in the same way as standards missions. For example, if the character has opted to fight Archvillains or Heroes at Elite Boss difficulty, Archvillains and Heroes in Mission Architect missions will spawn at the Elite Boss rank instead.</p>
+<h2 id="external-links-1"><a class="header" href="#external-links-1">External Links</a></h2>
+<ul>
+<li><a href="https://archive.paragonwiki.com/wiki/Notoriety">Notoriety</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="issue-27"><a class="header" href="#issue-27">Issue 27</a></h1>
+<p>Issue 27 is the second major release for Homecoming.</p>
+<h2 id="major-changes"><a class="header" href="#major-changes">Major Changes</a></h2>
+<ul>
+<li>Sonic, Seismic Blast and Earth Manipulation manipulation</li>
+<li>Asymmetrical customization options</li>
+<li>Tour guide missions</li>
+<li>Dr. Aeon Strike Force</li>
+<li>Permanent NPC Costume Power Rewards</li>
+<li><a href="https://forums.homecomingservers.com/topic/36519-focused-feedback-name-release-policy-phase-1-warning-mode/">Name Release - Phase 1: Warning Mode</a></li>
+</ul>
+<h2 id="highlights"><a class="header" href="#highlights">Highlights</a></h2>
+<h3 id="page-1"><a class="header" href="#page-1">Page 1</a></h3>
+<p>
+<img class="center" style="padding:10px;" src="issues/./../imgs/400px-Issue27.png">
+</p>
+<ul>
+<li>Two new story arcs featuring new characters, enemies, mission maps, badges and mechanics</li>
+<li>A new powerset: Sonic Manipulation</li>
+<li>Asymmetrical shoulder pads, stance selection, and sprint customization</li>
+<li>Reworks for Energy Melee, Titan Weapons, Teleportation, Trick Arrow and Blaster Secondaries</li>
+<li>Energy Melee for Scrappers</li>
+<li>Tons of improvements for PvP, including 9 new arena maps</li>
+<li>Expanded gamepad support</li>
+<li>A whole host of improvements, balance changes, and fixes</li>
+</ul>
+<h2 id="page-2"><a class="header" href="#page-2">Page 2</a></h2>
+<p>
+<img class="center" style="padding:10px;" src="issues/./../imgs/400px-Issue27p2.png">
+</p>
+<ul>
+<li>Tour Guide Missions</li>
+<li>Travel Power Updates</li>
+<li>Power Changes</li>
+<li>PvP Changes</li>
+<li>Coordinates and /thumbtack commands</li>
+<li>A whole host of improvements, balance changes, and fixes</li>
+</ul>
+<h3 id="page-3"><a class="header" href="#page-3">Page 3</a></h3>
+<p>
+<img class="center" style="padding:10px;" src="issues/./../imgs/400px-Issue27p3.png">
+</p>
+<ul>
+<li>Dr. Aeon Strike Force</li>
+<li>Difficulty/Challenge Options</li>
+<li>Powersets: Seismic Blast and Earth Manipulation</li>
+<li>Proliferation: Scrappers and Stalkers Stone Melee and Stone Armor</li>
+<li>Revamps: Stone Armor, Electrical Blast, and Dual Blades</li>
+<li>IO Sets: Slow Movement and Travel</li>
+<li>D-Sync Origin Enhancements</li>
+<li>New Emotes</li>
+<li>Base Items</li>
+<li>Costume Parts</li>
+</ul>
+<h3 id="page-4"><a class="header" href="#page-4">Page 4</a></h3>
+<p>
+<img class="center" style="padding:10px;" src="issues/./../imgs/400px-Issue27p4.png">
+</p>
+<ul>
+<li>Marquee Features
+<ul>
+<li>New Incarnate Mission Content: Sister Valeria</li>
+<li>New Powersets - Symphony Control, Sonic Assault</li>
+<li>Name Release Policy - Phase 1: Warnings</li>
+<li>New Advanced Difficulty - Imperious Task Force</li>
+<li>Advanced Difficulty Improvements &amp; New Reward Currency</li>
+<li>Permanent NPC Costume Power Rewards</li>
+</ul>
+</li>
+<li>Powers &amp; Gameplay Adjustments
+<ul>
+<li>Enemy Aggro Revamp</li>
+<li>Attack Typing Adjustments</li>
+<li>New Tech: Power Toggle Suspension</li>
+<li>Temporal Warriors, Instant Level 50 PvP Characters</li>
+</ul>
+</li>
+<li>Character Customization Improvements
+<ul>
+<li>Sheathed Weapons System</li>
+<li>Custom Weapons Expansion</li>
+<li>Costume Part Proliferation &amp; Fixes</li>
+<li>Arachnos Widow Costume Update</li>
+<li>Parkour and Blitz Movement Stances</li>
+<li>Walk Animation Customization</li>
+</ul>
+</li>
+<li>Various Additions &amp; Enhancements
+<ul>
+<li>New Badges</li>
+<li>Cimerora Tour Guides</li>
+<li>Proliferated Emotes</li>
+<li>New Roleplaying &amp; System Commands</li>
+<li>New AE Mission Maps, NPCs, Custom Enemy Powersets, and new Advanced Enemy Customization</li>
+<li>Fort Trident &amp; The Crucible Revamp</li>
+<li>Roleplaying Pub(V) and Luau(H) Area Additions</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
