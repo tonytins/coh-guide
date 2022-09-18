@@ -17,7 +17,16 @@ VIP Players have an inf limit of 2 billion regardless of how many Reward Tokens 
 
 ### Homecoming
 
-Because VIP is granted to players by default in Homecoming, all characters can have up to 2 billion Inf regardless of the amount of reward tokens they have. As CoH was formally a subscription-based game, the economy was likely already adjusted to taken into account the billion Inf as it is hardly a complaint.
+Because VIP is granted to players by default in Homecoming, all characters can have up to 2 billion Inf regardless of the amount of reward tokens they have.
+
+## Exchange
+
+### Prestige
+
+Prestige is used for base building. Inf can be traded for Prestige at the Super Group Registrar desks in Atlas Park, or Galaxy City (hero side) and Port Oakes (villain side).
+
+- The exchange rate is 1,000,000 inf for 2,000 prestige.
+- Ideally, a player can choose to earn Prestige instead Inf by switching to Super Group Mode when at higher levels.
 
 ## Understanding Inf
 
@@ -42,3 +51,4 @@ Statesman's Influence comprises not only the good will of the city and his exten
 ## External Links
 
 - [Understanding Influence and Infamy](https://archive.paragonwiki.com/wiki/Inf)
+- [Prestige](https://cityofheroes.fandom.com/wiki/Prestige)
