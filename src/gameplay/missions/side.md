@@ -17,8 +17,6 @@ The newspaper can be obtained in any zone from a Broker in Port Oakes and later 
 - Kidnapping
 - Heist
 
-The Radio from the Video Killed the Radio story arc has relation to th
-
 ## Notes
 
 - Both heroes and villains can use their radio and newspaper, respectfully, at anytime.
