@@ -5,9 +5,12 @@
 
 # Gameplay
 
+- [Missions]()
+  - [Side Missions](./gameplay/missions/side.md)
+  - [Architect Entertainment]()
 - [Inf](./gameplay/inf.md)
 - [Notoriety](./gameplay/notoriety.md)
-- [Base Building]()
+- [Base Building](./gameplay/bases.md)
 
 # Issues
 
